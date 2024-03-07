@@ -1,0 +1,31 @@
+<div class="container">
+  <form class="form" [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+    <label for="gender">Gender:</label>
+    <select id="gender" formControlName="gender">
+      <option *ngFor="let gender of genders" [value]="gender">
+        {{ gender }}
+      </option>
+    </select>
+
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" formControlName="weight" />
+
+    <label for="shoeSize">Shoe Size:</label>
+    <input type="text" id="shoeSize" formControlName="shoeSize" />
+
+    <button type="submit">Submit</button>
+  </form>
+  <div *ngIf="flexibilityResult" class="result-label">
+    <h2>Flexibility level:</h2>
+    <p
+      [ngClass]="{
+        green: flexibilityResult === 'Semi-Flex',
+        yellow: flexibilityResult === 'Semi-Rigid',
+        orange: flexibilityResult === 'Rigid',
+        red: flexibilityResult === 'Ultra-Rigid'
+      }"
+    >
+      {{ flexibilityResult }}
+    </p>
+  </div>
+</div>

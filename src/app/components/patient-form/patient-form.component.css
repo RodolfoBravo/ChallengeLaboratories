@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 19rem;
+  margin-bottom: 1rem;
+}
+.result-label {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+.result-label p {
+  margin: 3rem;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.green {
+  background-color: rgb(149, 250, 149);
+}
+
+.yellow {
+  background-color: rgb(245, 245, 157);
+}
+
+.orange {
+  background-color: rgb(255, 224, 168);
+}
+
+.red {
+  background-color: rgb(245, 147, 147);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form label {
+  text-align: right;
+  margin-bottom: 5px;
+  font-size: 1.5em;
+}
+
+.form input,
+.form button,
+.form select {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.5em;
+}
+
+.form button {
+  background-color: rgb(33, 233, 33);
+  border-radius: 5px;
+}

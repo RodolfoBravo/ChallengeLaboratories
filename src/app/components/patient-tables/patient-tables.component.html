@@ -1,0 +1,84 @@
+<div class="container-tables">
+  <table>
+    <thead>
+      <tr>
+        <th>Mens size</th>
+        <th>0-79 lbs</th>
+        <th>80 lbs</th>
+        <th>100 lbs</th>
+        <th>120 lbs</th>
+        <th>140 lbs</th>
+        <th>160 lbs</th>
+        <th>180 lbs</th>
+        <th>200 lbs</th>
+        <th>220 lbs</th>
+        <th>240 lbs</th>
+        <th>260 lbs</th>
+        <th>280 lbs</th>
+        <th>300 lbs</th>
+        <th>320 lbs</th>
+        <th>340 lbs</th>
+        <th>360 lbs +</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of menData">
+        <td>{{ row[0].id }}</td>
+        <td
+          *ngFor="let cell of row.slice(1)"
+          [ngClass]="{
+            green: cell.value === 'Semi-Flex',
+            yellow: cell.value === 'Semi-Rigid',
+            orange: cell.value === 'Rigid',
+            red: cell.value === 'Ultra-Rigid',
+            blue: cell.id === selectedCellId
+          }"
+          [id]="cell.id"
+        >
+          {{ cell.value }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Womans size</th>
+        <th>0-79 lbs</th>
+        <th>80 lbs</th>
+        <th>100 lbs</th>
+        <th>120 lbs</th>
+        <th>140 lbs</th>
+        <th>160 lbs</th>
+        <th>180 lbs</th>
+        <th>200 lbs</th>
+        <th>220 lbs</th>
+        <th>240 lbs</th>
+        <th>260 lbs</th>
+        <th>280 lbs</th>
+        <th>300 lbs</th>
+        <th>320 lbs</th>
+        <th>340 lbs</th>
+        <th>360 lbs +</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of womenData">
+        <td>{{ row[0].id }}</td>
+        <td
+          *ngFor="let cell of row.slice(1)"
+          [ngClass]="{
+            green: cell.value === 'Semi-Flex',
+            yellow: cell.value === 'Semi-Rigid',
+            orange: cell.value === 'Rigid',
+            red: cell.value === 'Ultra-Rigid',
+            blue: cell.id === selectedCellId
+          }"
+          [id]="cell.id"
+        >
+          {{ cell.value }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
