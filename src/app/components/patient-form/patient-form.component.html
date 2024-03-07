@@ -15,9 +15,10 @@
 
     <button type="submit">Submit</button>
   </form>
-  <div *ngIf="flexibilityResult" class="result-label">
+  <div class="result-label">
     <h2>Flexibility level:</h2>
     <p
+      *ngIf="flexibilityResult"
       [ngClass]="{
         green: flexibilityResult === 'Semi-Flex',
         yellow: flexibilityResult === 'Semi-Rigid',

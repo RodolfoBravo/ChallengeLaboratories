@@ -7,6 +7,7 @@ interface Flexibility {
 @Injectable({
   providedIn: 'root',
 })
+//class to use the flexibility calculator function
 export class PatientService {
   constructor() {}
 

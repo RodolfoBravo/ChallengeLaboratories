@@ -1,0 +1,9 @@
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}

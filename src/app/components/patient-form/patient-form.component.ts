@@ -27,7 +27,7 @@ export class PatientFormComponent {
       shoeSize: [''],
     });
   }
-
+  //function to call the flexibility calculator when clicked in button
   onSubmit(): void {
     const { gender, weight, shoeSize } = this.patientForm.controls;
     const flexibility = this.patientService.getPatientFlex(
@@ -36,10 +36,10 @@ export class PatientFormComponent {
       shoeSize.value
     );
     if (flexibility) {
+      //set the result to the corresponding variables
       this.flexibilityResult = flexibility.value;
       this.flexibilityId = flexibility.id;
       this.selectedCellService.setSelectedCellId(flexibility.id);
-      console.log(this.flexibilityResult, this.flexibilityId);
     } else {
       this.flexibilityResult = 'No se encontró un nivel de flexibilidad.';
     }
